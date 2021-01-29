@@ -177,6 +177,10 @@ public class Reportes extends javax.swing.JFrame {
         }
         
         JOptionPane.showMessageDialog(null,"Los reportes fueron generados con exito","",WIDTH,null);
+        jCheckBox1.setSelected(false);
+        jCheckBox2.setSelected(false);
+        jCheckBox3.setSelected(false);
+        jCheckBox4.setSelected(false);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

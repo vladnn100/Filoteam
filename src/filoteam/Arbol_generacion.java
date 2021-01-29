@@ -226,7 +226,18 @@ public class Arbol_generacion extends javax.swing.JFrame {
         }
         
         JOptionPane.showMessageDialog(null,"Las especies fueron agregadas al arbol con exito","",WIDTH,null);
-        
+        ArabicaP.setSelected(false);
+        CatuaiP.setSelected(false);
+        TipicaP.setSelected(false);
+        CaturraP.setSelected(false);
+        BorbonP.setSelected(false);
+        MundoNovoP.setSelected(false);
+        ArabicaH.setSelected(false);
+        CatuaiH.setSelected(false);
+        TipicaH.setSelected(false);
+        CaturraH.setSelected(false);
+        BorbonH.setSelected(false);
+        MundoNovoH.setSelected(false);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

@@ -10,7 +10,7 @@ import java.io.PrintWriter;
 public class Main {
     public static void main(String[] args) throws IOException {
         //Scanner scanner = new Scanner(System.in);
-        String REPORTE_BORBON = "Reporte_Borbon.txt";
+        /*String REPORTE_BORBON = "Reporte_Borbon.txt";
         String REPORTE_TIPICA = "Reporte_Tipica.txt";
         String REPORTE_CATURRA = "Reporte_Caturra.txt";
         String REPORTE_CRUCES = "Reporte_Cruces.txt";
@@ -51,7 +51,7 @@ public class Main {
         /*especies[2].agregarAlFinal(caturra);
         especies[2].agregarAlFinal(hibrido2);*/
         //Mostrar listas de especies
-        especies[0].listar();
+        /*especies[0].listar();
         especies[1].listar();
         especies[2].listar();
         //Filas Secuenciales Puras
@@ -108,6 +108,68 @@ public class Main {
         pw_borbon.close();
         pw_tipica.close();
         pw_caturra.close();
-        pw_cruces.close();
+        pw_cruces.close();*/
+      
+        Grafo grafo = new Grafo();
+		// // Exemplos de grafos
+		// // Grafo Completo
+		// System.out.println("Ejemplo de Grafo Completo: ");
+		// Vertice cafe1 = new Vertice("cafe1");
+		// Vertice cafe2 = new Vertice("cafe2");
+		// Vertice cafe3 = new Vertice("cafe3");
+
+		// grafo.adicionarVertice(cafe1);
+		// grafo.adicionarVertice(cafe2);
+		// grafo.adicionarVertice(cafe3);
+		
+		System.out.println("----------------------------------------------------\n");
+		System.out.println("Ejemplo de Grafo Conexo 2: ");
+		// grafo.conecta(cafe1, cafe2, new Arista(10));
+		// Vertice arabica = new Vertice("arabica");
+		// Vertice borbon = new Vertice("borbon");
+		// Vertice catuai = new Vertice("catuai");
+		// Vertice caturra = new Vertice("caturra");
+		// Vertice tipica = new Vertice("tipica");
+		// Vertice borbon2 = new Vertice("borbon2");
+		// Vertice catuai2 = new Vertice("catuai2");
+		// Vertice caturra2 = new Vertice("caturra2");
+	    // Vertice tipica2 = new Vertice("tipica2");
+		// Vertice borbon3 = new Vertice("borbon3");
+		Vertice arabica = new Vertice(new Arabica(), 1);
+		Vertice borbon = new Vertice(new Borbon(), 1);
+		Vertice catuai = new Vertice(new Catuai(), 1);
+		Vertice caturra = new Vertice(new Caturra(), 1);
+		Vertice tipica = new Vertice(new Tipica(), 1);
+		Vertice borbon2 = new Vertice(new Borbon(), 2);
+		Vertice catuai2 = new Vertice(new Catuai(), 2);
+		Vertice caturra2 = new Vertice(new Caturra(), 2);
+                Vertice tipica2 = new Vertice(new Tipica(), 2);
+		Vertice borbon3 = new Vertice(new Borbon(), 3);
+
+		grafo.adicionarVertice(arabica);
+		grafo.adicionarVertice(borbon);
+		grafo.adicionarVertice(catuai);
+		grafo.adicionarVertice(caturra);
+		grafo.adicionarVertice(tipica);
+		grafo.adicionarVertice(borbon2);
+		grafo.adicionarVertice(catuai2);
+		grafo.adicionarVertice(caturra2);
+		grafo.adicionarVertice(tipica2);
+		grafo.adicionarVertice(borbon3);
+		
+		grafo.conecta(arabica, catuai, new Arista(4));
+		grafo.conecta(catuai, borbon, new Arista(5));
+		grafo.conecta(catuai, caturra, new Arista(8));
+		grafo.conecta(tipica, caturra, new Arista(5));
+		grafo.conecta(borbon2, caturra, new Arista(4));
+		grafo.conecta(borbon2, borbon3, new Arista(2));
+		grafo.conecta(tipica, catuai2, new Arista(5));
+		grafo.conecta(borbon2, catuai2, new Arista(3));
+
+
+		Dijkstra dijkstra = new Dijkstra(grafo);
+		dijkstra.caminoCostoMinimo(arabica, tipica2);
+		System.out.println(dijkstra.vertices.values());
+		System.out.println(dijkstra.vertices.keySet());
     }
 }
