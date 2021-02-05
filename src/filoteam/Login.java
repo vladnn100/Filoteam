@@ -40,7 +40,7 @@ public class Login extends javax.swing.JFrame {
 
         Contraseña.setText("Contraseña");
         jPanel1.add(Contraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 320, -1, -1));
-        jPanel1.add(cajaUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 260, 110, -1));
+        jPanel1.add(cajaUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 260, 130, -1));
 
         jButton1.setText("Iniciar sesion");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -57,7 +57,7 @@ public class Login extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 450, -1, -1));
-        jPanel1.add(cajaContraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 320, 110, -1));
+        jPanel1.add(cajaContraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 320, 130, -1));
 
         ImagenFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/folder-imagen/WhatsApp Image 2021-01-29 at 1.35.57 PM.jpeg"))); // NOI18N
         jPanel1.add(ImagenFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -30, 520, 570));
@@ -72,16 +72,18 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        String usuarioCorrecto = "user";
-        String contraCorrecta = "123";
+        String usuarioCorrecto = "usuario de prueba 04";
+        String usuarioCorrecto2= "Ana Maria Huayna";
+        String contraCorrecta = "123456789";
+        String contraCorrecta2 = "159753456852";
         
-        if(usuarioCorrecto.equals(cajaUsuario.getText())) {
+        if(usuarioCorrecto.equals(cajaUsuario.getText()) || usuarioCorrecto2.equals(cajaUsuario.getText())) {
             String contraseña = "";
             for(int i = 0; i < cajaContraseña.getPassword().length; i++){
                 contraseña += cajaContraseña.getPassword()[i];
             }
             
-            if(contraCorrecta.equals(contraseña)) {
+            if(contraCorrecta.equals(contraseña) || contraCorrecta2.equals(contraseña)) {
                 JOptionPane.showMessageDialog(null, "Ingresaste al sistema");
                 Principal m1 = new Principal();
                 m1.setVisible(true);

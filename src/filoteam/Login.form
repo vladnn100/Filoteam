@@ -59,7 +59,7 @@
         <Component class="javax.swing.JTextField" name="cajaUsuario">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="220" y="260" width="110" height="-1"/>
+              <AbsoluteConstraints x="210" y="260" width="130" height="-1"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -92,7 +92,7 @@
         <Component class="javax.swing.JPasswordField" name="cajaContrase&#xf1;a">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="220" y="320" width="110" height="-1"/>
+              <AbsoluteConstraints x="210" y="320" width="130" height="-1"/>
             </Constraint>
           </Constraints>
         </Component>
