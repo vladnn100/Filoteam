@@ -3,9 +3,13 @@ package filoteam;
 import static java.awt.image.ImageObserver.WIDTH;
 import java.util.Collection;
 import javax.swing.JOptionPane;
+//import java.util.HashSet;
+//import java.util.Iterator;
+//import java.util.Set;
 
 public class CaminoCorto extends javax.swing.JFrame {
-
+    
+    //HashSet<String> hset = new HashSet<String>();
     Grafo grafo = new Grafo();
     Vertice arabica = new Vertice(new Arabica(), 1);
     Vertice borbon = new Vertice(new Borbon(), 1);
@@ -162,6 +166,69 @@ public class CaminoCorto extends javax.swing.JFrame {
             grafo.conecta(tipica, caturra, new Arista(x));
         }
         
+        //el resto de if :v
+        if(Arabica.isSelected() && Caturra.isSelected())
+        {
+            grafo.conecta(arabica, caturra, new Arista(x));   
+        }
+        if(Arabica.isSelected() && Borbon.isSelected())
+        {
+            grafo.conecta(arabica, borbon, new Arista(x));
+        }
+        if(Catuai.isSelected() && Arabica.isSelected())
+        {
+            grafo.conecta(catuai, arabica, new Arista(x));
+        }
+        if(Catuai.isSelected() && Tipica.isSelected())
+        {
+            grafo.conecta(catuai, tipica, new Arista(x));
+        }
+        if(Tipica.isSelected() && Arabica.isSelected())
+        {
+            grafo.conecta(tipica, arabica, new Arista(x));
+        }
+        if(Tipica.isSelected() && Catuai.isSelected())
+        {
+            grafo.conecta(tipica, catuai, new Arista(x));
+        }
+        if(Tipica.isSelected() && Borbon.isSelected())
+        {
+            grafo.conecta(tipica, borbon, new Arista(x));
+        }
+        if(Caturra.isSelected() && Arabica.isSelected())
+        {
+            grafo.conecta(caturra, arabica, new Arista(x));
+        }
+        if(Caturra.isSelected() && Catuai.isSelected())
+        {
+            grafo.conecta(caturra, catuai, new Arista(x));
+        }
+        if(Caturra.isSelected() && Tipica.isSelected())
+        {
+            grafo.conecta(caturra, tipica, new Arista(x));
+        }
+        if(Caturra.isSelected() && Borbon.isSelected())
+        {
+            grafo.conecta(caturra, borbon, new Arista(x));
+        }
+        if(Borbon.isSelected() && Arabica.isSelected())
+        {
+            grafo.conecta(borbon, arabica, new Arista(x));
+        }
+        if(Borbon.isSelected() && Catuai.isSelected())
+        {
+            grafo.conecta(borbon, catuai, new Arista(x));
+        }
+        if(Borbon.isSelected() && Tipica.isSelected())
+        {
+            grafo.conecta(borbon, tipica, new Arista(x));
+        }
+        if(Borbon.isSelected() && Caturra.isSelected())
+        {
+            grafo.conecta(borbon, caturra, new Arista(x));
+        }
+        
+        
         JOptionPane.showMessageDialog(null,"Las especies fueron agregadas al mapa con exito","",WIDTH,null);
         jTextField1.setText(null);
         Arabica.setSelected(false);
@@ -178,6 +245,17 @@ public class CaminoCorto extends javax.swing.JFrame {
 	Collection col1 = dijkstra.vertices.values();
         Collection col2 = dijkstra.vertices.keySet();
         
+        //Set<String> hset = new HashSet<String>();
+        //hset = (Set<String>) col2;
+        //Iterator<String> it = col2.iterator();
+        //for (String temp : hset) {
+        //JOptionPane.showMessageDialog(null,temp,"",WIDTH,null);
+     //}   
+        /*while(it.hasNext()){
+                if("Tipica".equals(it.next())){
+                JOptionPane.showMessageDialog(null,it.next(),"",WIDTH,null);
+                }
+              }*/
         JOptionPane.showMessageDialog(null,"Especies-destino:  " + col2 + "\n" + "Distancias hasta llegar a especies  " + col1,"",WIDTH,null);
     }//GEN-LAST:event_jButton2ActionPerformed
 
